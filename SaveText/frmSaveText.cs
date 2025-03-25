@@ -47,10 +47,24 @@ namespace SaveText
                     MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 // als we op 'yes' klikken
                 if (result == DialogResult.Yes) {
-                    // map aanmaken
-                    // Specifiek System.IO er voor plaatsen omdat
-                    // er anders conflict is met mijn eigen Directory variabele
-                    System.IO.Directory.CreateDirectory(Directory);
+                    // opnieuw try catch omdat we opnieuw
+                    // zullen proberen het bestand op te slaan
+                    try
+                    {
+                        // map aanmaken
+                        // Specifiek System.IO er voor plaatsen omdat
+                        // er anders conflict is met mijn eigen Directory variabele
+                        System.IO.Directory.CreateDirectory(Directory);
+                        // opnieuw proberen om bestand op te slaan
+                        TextBll.SaveText(Directory, title, story);
+                        // boodschap tonen dat het gelukt is
+                        MessageBox.Show(title + " opgeslagen.");
+                    }
+                    // algemene foutboodschap tonen
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
             // probleem 'niet goed ingevuld' opvangen
