@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SaveText.Bll\SaveText.Bll.csproj">
+      <Project>{4996df5f-93b9-4148-b894-1233abc8964e}</Project>
+      <Name>SaveText.Bll</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
