@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveText", "SaveText\SaveText.csproj", "{B2BB1328-8808-4A46-96CF-1340D8F5BBAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveText.UI", "SaveText\SaveText.UI.csproj", "{B2BB1328-8808-4A46-96CF-1340D8F5BBAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

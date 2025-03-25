@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SaveText
 {
-    public partial class Form1 : Form
+    public partial class frmSaveText : Form
     {
-        public Form1()
+        public frmSaveText()
         {
             InitializeComponent();
         }
