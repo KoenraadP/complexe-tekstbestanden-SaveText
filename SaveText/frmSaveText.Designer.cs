@@ -32,6 +32,7 @@
             this.txtStory = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -67,6 +68,14 @@
             this.btnOpen.TabIndex = 3;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
+            // 
+            // ofd
+            // 
+            this.ofd.FileName = "openFileDialog1";
+            this.ofd.Filter = "Tekstbestanden|*.txt";
+            this.ofd.InitialDirectory = "C:\\stories\\";
+            this.ofd.FileOk += new System.ComponentModel.CancelEventHandler(this.Ofd_FileOk);
             // 
             // frmSaveText
             // 
@@ -90,6 +99,7 @@
         private System.Windows.Forms.TextBox txtStory;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.OpenFileDialog ofd;
     }
 }
 

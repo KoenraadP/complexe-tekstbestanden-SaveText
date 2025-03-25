@@ -78,5 +78,24 @@ namespace SaveText
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BtnOpen_Click(object sender, EventArgs e)
+        {
+           // dialoogvenster voor openen bestand tonen
+           ofd.ShowDialog();
+        }
+
+        private void Ofd_FileOk(object sender, CancelEventArgs e)
+        {
+            // story invullen via inhoud van bestand
+            // geselecteerd bestand = ofd.FileName
+            // dit is bijvoorbeeld C:\stories\verhaal.txt
+            txtStory.Text = File.ReadAllText(ofd.FileName);
+            // title invullen via bestandsnaam
+            // deze methode pakt het laatste stuk van het pad
+            // bijvoorbeeld verhaal.txt en verwijdert dan ook nog
+            // de extensie (.txt)
+            txtTitle.Text = Path.GetFileNameWithoutExtension(ofd.FileName);
+        }
     }
 }
